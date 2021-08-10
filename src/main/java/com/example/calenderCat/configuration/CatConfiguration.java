@@ -15,6 +15,7 @@ public class CatConfiguration {
     @Value("${api.cataas.url}")
     private String url;
 
-
+    @Value("${general.upload_path}")
+    private String uploadPath;
 }
 

@@ -1,4 +1,4 @@
-package com.example.calenderCat.Dto;
+package com.example.calenderCat.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

@@ -1,4 +1,4 @@
-package com.example.calenderCat.Dto;
+package com.example.calenderCat.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
@@ -8,6 +8,9 @@ public class CalenderDto {
 
     @JsonProperty("meta")
     private CalenderMetoDto meta;
+
+    @JsonProperty("response")
+    private DtoCalendarResponse dtoCalendarResponse;
 
 
 }

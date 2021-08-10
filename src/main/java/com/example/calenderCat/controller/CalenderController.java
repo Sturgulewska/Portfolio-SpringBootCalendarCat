@@ -1,7 +1,7 @@
 package com.example.calenderCat.controller;
 
-import com.example.calenderCat.Dto.CalenderDto;
-import com.example.calenderCat.Service.CalenderService;
+import com.example.calenderCat.dto.CalenderDto;
+import com.example.calenderCat.service.CalenderService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

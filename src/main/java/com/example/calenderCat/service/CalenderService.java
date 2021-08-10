@@ -1,12 +1,11 @@
-package com.example.calenderCat.Service;
+package com.example.calenderCat.service;
 
-import com.example.calenderCat.Dto.CalenderDto;
 import com.example.calenderCat.configuration.CalenderConfiguration;
+import com.example.calenderCat.dto.CalenderDto;
 import com.example.calenderCat.utils.MyJsonUtils;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.Data;
 import okhttp3.*;
-import org.aspectj.weaver.ast.Call;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -43,10 +42,10 @@ public class CalenderService {
                 .addPathSegment("v2")
                 .addPathSegment("holidays")
                 .addQueryParameter("api_key", calenderConfiguration.getApi_key())
-                .addQueryParameter("countries", "PL")
+                .addQueryParameter("country", "PL")
                 .addQueryParameter("year", "2019")
                 .build();
-        System.out.println(httpUrl);
+
         return httpUrl;
     }
 

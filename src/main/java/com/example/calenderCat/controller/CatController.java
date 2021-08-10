@@ -1,8 +1,8 @@
 package com.example.calenderCat.controller;
 
 
-import com.example.calenderCat.Dto.CatDto;
-import com.example.calenderCat.Service.CatService;
+import com.example.calenderCat.dto.CatDto;
+import com.example.calenderCat.service.CatService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,6 +30,11 @@ public class CatController {
         String result = "https://cataas.com"+
                 resultDto.getUrlCat();
         return new ResponseEntity<>(result, HttpStatus.OK);
+    }
 
+    @RequestMapping(value = "/save_cat", method = RequestMethod.GET)
+    public ResponseEntity<Object> saveCat() {
+        catService.saveCat();
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }
